@@ -60,7 +60,7 @@ thetaS = atan2d(yf,xf);
 if tkey
     phiS = sqrt(yf.^2+xf.^2)*fov/2; % equidistant
 else
-    phiS = 2*asind(sqrt(yf.^2+xf.^2)/(2*sind(0.5*fov/2))); % equisolid-angle
+    phiS = 2*asind(sqrt(yf.^2+xf.^2)*sind(fov/4)); % equisolidangle proj
 end
 sindphiS = sind(phiS);
 xs = sindphiS.*cosd(thetaS); ys = sindphiS.*sind(thetaS); zs = cosd(phiS);
